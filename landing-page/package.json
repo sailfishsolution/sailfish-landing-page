@@ -1,0 +1,30 @@
+{
+  "name": "sailfish-landing-page",
+  "private": true,
+  "version": "0.1.0",
+  "scripts": {
+    "dev": "next dev",
+    "generate-og": "node scripts/generate-og.js",
+    "generate-sitemap": "node scripts/generate-sitemap.js",
+    "prebuild": "node scripts/generate-og.js && node scripts/generate-sitemap.js",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "autoprefixer": "10.4.14",
+    "next": "^14.2.35",
+    "next-themes": "0.2.0",
+    "marked": "^5.1.1",
+    "@tailwindcss/typography": "^0.5.9",
+    "sharp": "^0.32.0",
+    "postcss": "^8.5.6",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "tailwindcss": "3.4.0"
+  },
+  "devDependencies": {
+    "@types/node": "^25.0.8",
+    "@types/react": "^19.2.8",
+    "typescript": "^5.9.3"
+  }
+}

@@ -1,0 +1,37 @@
+---
+title: "Structured Data for Snippets"
+date: "2026-01-14"
+description: "Practical patterns for using schema to increase snippet and PAA eligibility."
+slug: "structured-data-for-snippets"
+---
+
+# Structured Data for Snippets
+
+Structured data doesn't guarantee snippets, but it gives search engines clearer signals about the type and purpose of your content.
+
+## Patterns
+
+- `FAQPage` for common questions
+- `HowTo` for step-by-step guides
+- `Article` + `author` + `datePublished` for trusted context
+
+### Small code example (FAQ)
+
+```json
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is structured data?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Structured data is machine-readable metadata that helps search engines interpret a page's content."
+      }
+    }
+  ]
+}
+```
+
+Implement schema where it makes sense, and test it using Google's Rich Results Test or the Schema Markup Validator.

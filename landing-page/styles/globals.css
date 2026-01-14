@@ -1,0 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg: #ffffff;
+  --text: #111827;
+}
+
+html, body {
+  height: 100%;
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+}
+
+.container { max-width: 1100px }
+
+/* Dark mode variables and quick overrides to make Tailwind's utility classes adapt */
+.dark {
+  --bg: #071024;
+  --text: #e6eef8;
+  --muted: #9ca3af;
+  --card: #071828;
+  --border: #1f2937;
+}
+
+.dark body { background-color: var(--bg); color: var(--text); }
+
+/* Override common utility colors when in dark mode (keeps edits minimal) */
+.dark .bg-white { background-color: var(--card) !important; }
+.dark .bg-gray-50 { background-color: rgba(255,255,255,0.02) !important; }
+.dark .text-gray-700, .dark .text-gray-600, .dark .text-gray-500 { color: var(--muted) !important; }
+.dark .border, .dark .border-gray-50, .dark .border-t { border-color: var(--border) !important; }
+
+/* Make links slightly brighter in dark mode */
+.dark a { color: #93c5fd }
