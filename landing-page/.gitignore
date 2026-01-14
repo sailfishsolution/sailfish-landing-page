@@ -12,3 +12,6 @@ yarn-error.log
 
 # Env and secrets
 .env*
+
+# SWC caches 
+.swc/
